@@ -1,5 +1,6 @@
 {
-  "LoginButton": "התחבר",
-  "WelcomeText": "ברוך הבא!",
-  "PlaceholderText": "הקלד כאן..."
+  "rtl": "true",
+  "Login": "התחבר",
+  "Welcome": "ברוך הבא!",
+  "Placeholder": "הקלד כאן..."
 }

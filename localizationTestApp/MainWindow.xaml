@@ -4,21 +4,29 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:localizationTestApp"
-        xmlns:locale="clr-namespace:Localization;assembly=localization"
+        xmlns:loc="clr-namespace:localization;assembly=localization"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
 
     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
 
         <Button Width="200" Height="50"
-                locale:LocalizationExtension.Key="LoginButton"
-                Command="{x:Static locale:LocalizationExtension.NextLocaleCommand}"                />
+                Content="{loc:LocaleExtension Text=Login}"
+                Command="{x:Static loc:LocaleDictionary.NextLocaleCommand}"/>
 
-        <TextBlock Margin="10"
-                   locale:LocalizationExtension.Key="WelcomeText" />
+        <Button Width="200" Height="50"
+          Content="Load Hebrew"
+          Command="{x:Static loc:LocaleDictionary.ChangeLocaleCommand}"
+                CommandParameter="he"/>
+        
+        <TextBlock Margin="10" 
+                   Text="{loc:LocaleExtension Text=Welcome}"/>
 
         <TextBox Width="200"
-                 locale:LocalizationExtension.Key="PlaceholderText" />
+                 Text="{loc:LocaleExtension Text=Placeholder}"/>
 
+        <ComboBox Width="200" IsEditable="True"
+                  ItemsSource="{x:Static loc:LocaleDictionary.LocaleList}"
+                  Text="{Binding Path=(loc:LocaleDictionary.Locale)}"/>
     </StackPanel>
 </Window>

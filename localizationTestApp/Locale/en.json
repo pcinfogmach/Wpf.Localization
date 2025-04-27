@@ -1,5 +1,6 @@
 {
-  "LoginButton": "Connect",
-  "WelcomeText": "Welcome!",
-  "PlaceholderText": "Type here..."
+  "rtl": "false",
+  "Login": "Connect",
+  "Welcome": "Welcome!",
+  "Placeholder": "Type here..."
 }

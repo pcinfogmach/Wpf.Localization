@@ -1,4 +1,5 @@
-﻿using Localization;
+﻿using localization;
+using System.Collections.Generic;
 using System.Windows;
 
 namespace localizationTestApp
@@ -11,11 +12,6 @@ namespace localizationTestApp
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            LocalizationExtension.Locale = LocalizationExtension.Locale == "en" ? "he" : "en";
         }
     }
 }

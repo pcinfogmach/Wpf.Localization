@@ -1,0 +1,24 @@
+﻿<Window x:Class="localizationTestApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:localizationTestApp"
+        xmlns:locale="clr-namespace:Localization;assembly=localization"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+
+        <Button Width="200" Height="50"
+                locale:LocalizationExtension.Key="LoginButton"
+                Command="{x:Static locale:LocalizationExtension.NextLocaleCommand}"                />
+
+        <TextBlock Margin="10"
+                   locale:LocalizationExtension.Key="WelcomeText" />
+
+        <TextBox Width="200"
+                 locale:LocalizationExtension.Key="PlaceholderText" />
+
+    </StackPanel>
+</Window>

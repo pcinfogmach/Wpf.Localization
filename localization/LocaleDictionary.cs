@@ -20,7 +20,7 @@ namespace localization
         static string LocaleFolder =>
             Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "Locale");
         public static List<string> LocaleList => (Directory.Exists(LocaleFolder)) ?
-            Directory.GetFiles(LocaleFolder, "*.json").Select(Path.GetFileNameWithoutExtension).ToList() : null;
+            Directory.GetFiles(LocaleFolder, "*.json").Select(Path.GetFileNameWithoutExtension).ToList() : new List<string>();
         public static string Locale
         {
             get => _locale;
@@ -60,7 +60,7 @@ namespace localization
 
         static void LoadDictionary(string locale)
         {
-            string filePath = GetLocaleFilePath();
+            string filePath = GetLocaleFilePath(locale);
             if (string.IsNullOrEmpty(filePath) || !File.Exists(filePath))
                 return;
 
@@ -87,10 +87,10 @@ namespace localization
             }
         }
 
-        static string GetLocaleFilePath()
+        static string GetLocaleFilePath(string locale)
         {
             string localeFolder = LocaleFolder;
-            string filePath = Path.Combine(LocaleFolder, Locale + ".json");
+            string filePath = Path.Combine(LocaleFolder, locale + ".json");
 
             if (!File.Exists(filePath))
             {

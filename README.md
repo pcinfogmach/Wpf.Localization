@@ -9,6 +9,7 @@ It is a static class, allowing you to interact with it from anywhere in your cod
 
 *Note:*
 The json files should be placed in "Locale" folder in your project.
+Must build solution for binding to work
 ```
 <Window x:Class="localizationTestApp.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"

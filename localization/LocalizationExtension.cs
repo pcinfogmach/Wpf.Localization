@@ -56,6 +56,7 @@ namespace Localization
 
         public static RelayCommand<string> ChangeLocaleCommand = new RelayCommand<string>((value) => { Locale = value; } );
         public static RelayCommand NextLocaleCommand = new RelayCommand(() => { NextLocale(); });
+
         public static void NextLocale()
         {
             string localeFolder = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), _localeFolder);

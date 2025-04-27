@@ -12,8 +12,10 @@ add xmlns refrence and then
 ```
 
 features:
-change locale easily with command and commandproperty or with nextlocalecommand or directly through code
+change locale easily with changeLocale command and commandparameter, or with nextlocalecommand or directly through code
+is static class so you can interact with it from anywhere in your code including through a viewmodel.
 
-need to add a "Locale" Folder to your project
+note:
+Requires a "Locale" Folder in your project
 
-is static class so you can interact with it from anywhere in your code inckuding through a viewmodel.
+

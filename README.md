@@ -15,3 +15,5 @@ features:
 change locale easily with command and commandproperty or with nextlocalecommand or directly through code
 
 need to add a "Locale" Folder to your project
+
+is static class so you can interact with it from anywhere in your code inckuding through a viewmodel.

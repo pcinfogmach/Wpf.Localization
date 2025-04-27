@@ -1,15 +1,14 @@
 # Wpf localization
-Easy localization For wpf using json.
 
-features:
-change locale easily with changeLocale command and commandparameter, or with nextlocalecommand or directly through code
-is static class so you can interact with it from anywhere in your code including through a viewmodel.
+Easy localization for WPF using JSON.
 
-note:
-Requires a "Locale" Folder in your project
+*Features:*
+Change locale easily using the ChangeLocale command with the CommandParameter, or use NextLocaleCommand, or directly manipulate it through code.
 
-sample usage
+It is a static class, allowing you to interact with it from anywhere in your code, including through a ViewModel.
 
+*Note:*
+The json files should be placed in "Locale" folder in your project.
 ```
 <Window x:Class="localizationTestApp.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"

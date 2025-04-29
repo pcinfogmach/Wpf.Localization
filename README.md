@@ -24,7 +24,7 @@ Must build solution for binding to work
     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
 
         <Button Width="200" Height="50"
-                Content="{loc:LocaleExtension Text=Login}"
+                Content="{loc:Locale Text=Login}"
                 Command="{x:Static loc:LocaleDictionary.NextLocaleCommand}"/>
 
         <Button Width="200" Height="50"
@@ -33,10 +33,10 @@ Must build solution for binding to work
                 CommandParameter="he"/>
         
         <TextBlock Margin="10" 
-                   Text="{loc:LocaleExtension Text=Welcome}"/>
+                   Text="{loc:Locale Text=Welcome}"/>
 
         <TextBox Width="200"
-                 Text="{loc:LocaleExtension Text=Placeholder}"/>
+                 Text="{loc:Locale Text=Placeholder}"/>
 
         <ComboBox Width="200" IsEditable="True"
                   ItemsSource="{x:Static loc:LocaleDictionary.LocaleList}"
